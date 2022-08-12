@@ -44,6 +44,9 @@
       "prettier --ignore-path .eslintignore --single-quote --write"
     ]
   },
+  "extraMetadata": {
+    "main": "main.prod.js"
+  },
   "build": {
     "extends": null,
     "generateUpdatesFilesForAllChannels": true,

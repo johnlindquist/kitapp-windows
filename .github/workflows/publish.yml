@@ -13,13 +13,6 @@ jobs:
   publish-windows:
     runs-on: windows-2022
 
-    strategy:
-      matrix:
-        include:
-          - arch: x64
-          - arch: arm64
-      fail-fast: false
-
     steps:
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v3.x
@@ -56,4 +49,4 @@ jobs:
           yarn
           yarn install-electron-deps
           yarn build
-          yarn electron-builder --publish always -w --${{matrix.arch}}
+          yarn electron-builder --publish always -w

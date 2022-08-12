@@ -45,6 +45,7 @@ jobs:
           # This is used for uploading release assets to github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          npm i -g electron-builder@23.0.3
           yarn add "@johnlindquist/kit"
           yarn
           yarn install-electron-deps

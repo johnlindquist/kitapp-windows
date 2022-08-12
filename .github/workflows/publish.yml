@@ -14,6 +14,10 @@ jobs:
     runs-on: windows-2022
 
     strategy:
+      matrix:
+        include:
+          - arch: x64
+          - arch: arm64
       fail-fast: false
 
     steps:
@@ -52,4 +56,4 @@ jobs:
           yarn
           yarn install-electron-deps
           yarn build
-          yarn electron-builder --publish always -w
+          yarn electron-builder --publish always -w --${{matrix.arch}}

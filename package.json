@@ -45,6 +45,7 @@
     ]
   },
   "build": {
+    "extends": null,
     "generateUpdatesFilesForAllChannels": true,
     "detectUpdateChannel": "true",
     "productName": "Kit",

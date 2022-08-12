@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@akiflow/electron-panel-window@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@akiflow/electron-panel-window/-/electron-panel-window-3.2.1.tgz#efe709c29c76916e193194f2c8873bbd76547f2c"
-  integrity sha512-IlDQjCCGSpJTyydsGI3GMqc/zRm0eVjShPlEnpmLbuVxB0yovDKw6+Yk9RCINk5myzRix7+sUfTXktHSzkDTHg==
-  dependencies:
-    bindings "1.5.0"
-    nan "2.14.2"
-
 "@babel/runtime@^7.7.2":
   version "7.17.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
@@ -463,7 +455,7 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-bindings@1.5.0, bindings@^1.5.0:
+bindings@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz#10353c9e945334bc0511a6d90b38fbc7c9c504df"
   integrity sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
@@ -1156,11 +1148,6 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-nan@2.14.2:
-  version "2.14.2"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
-  integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
-
 nan@^2.14.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
@@ -1188,11 +1175,6 @@ node-addon-api@3.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.0.tgz#812446a1001a54f71663bed188314bba07e09247"
   integrity sha512-sSHCgWfJ+Lui/u+0msF3oyCgvdkhxDbkCS6Q8uiJquzOimkJBvX6hl5aSSA7DR1XbMpdM8r7phjcF63sF4rkKg==
 
-node-addon-api@^3.0.2:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
-  integrity sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
-
 node-addon-api@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.3.0.tgz#52a1a0b475193e0928e98e0426a0d1254782b77f"
@@ -1202,14 +1184,6 @@ node-gyp-build@4.x.x:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
-
-node-mac-permissions@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/node-mac-permissions/-/node-mac-permissions-2.2.1.tgz#69497a08a47ebed336d794a005eb3b8949793f87"
-  integrity sha512-lmSuexF/XcAvtanSReDDrr61Bz4FveSmVl1wHY0Be6RV0+QpCK1RMpjWxtKG0ALqX4p+k2cJ/u7GBV8dkUeLeA==
-  dependencies:
-    bindings "^1.5.0"
-    node-addon-api "^3.0.2"
 
 node-pty@0.10.1:
   version "0.10.1"

@@ -107,15 +107,6 @@ export const openMenu = async (event?: KeyboardEvent) => {
     const updateItems: MenuItemConstructorOptions[] = [];
 
     if (!kitState.authorized) {
-      const { askForAccessibilityAccess } = await import(
-        'node-mac-permissions'
-      );
-      authItems.push({
-        label: `Open Accessibility Panel to Enable Snippets, Clipbboard History, etc...,`,
-        click: () => askForAccessibilityAccess(),
-        icon: menuIcon(kitState.notifyAuthFail ? 'warn' : 'cogwheel'),
-      });
-
       authItems.push({
         label: `Learn More About Permissions`,
         click: runScript(kitPath('help', 'authorized-info.js')),

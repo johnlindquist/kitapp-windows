@@ -978,22 +978,9 @@ const kitMessageMap: ChannelHandler = {
   }),
 
   VERIFY_FULL_DISK_ACCESS: toProcess(async ({ child }, { channel }) => {
-    let value = false;
-    if (kitState.isMac) {
-      const { getAuthStatus, askForFullDiskAccess } = await import(
-        'node-mac-permissions'
-      );
-      const authStatus = await getAuthStatus('full-disk-access');
-      if (authStatus === 'authorized') {
-        value = true;
-      } else {
-        askForFullDiskAccess();
-      }
-    } else {
-      value = true;
-    }
 
-    child?.send({ channel, value });
+
+    child?.send({ channel, value: true });
   }),
 
   SET_SELECTED_TEXT: toProcess(async ({ child }, { channel, value }) => {

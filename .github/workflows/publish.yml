@@ -45,7 +45,7 @@ jobs:
           # This is used for uploading release assets to github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm config delete node_gyp
+          npm install --global --production windows-build-tools
           npm install npm@latest -g
           yarn add "@johnlindquist/kit" --network-timeout 1000000
           yarn --network-timeout 1000000

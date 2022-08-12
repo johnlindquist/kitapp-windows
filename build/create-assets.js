@@ -2,8 +2,8 @@ const go = async () => {
   const { chdir } = await import('process');
   const path = await import('path');
 
-  console.log(`PWD`, process.env.PWD);
-  chdir(process.env.PWD);
+  console.log(`PWD`, process.cwd());
+  chdir(process.cwd());
 
   const { execa } = await import('execa');
   const {
@@ -13,7 +13,7 @@ const go = async () => {
 
   const { writeFile } = await import('fs/promises');
   const releaseChannelTxt = path.resolve(
-    process.env.PWD,
+    process.cwd(),
     'assets',
     'release_channel.txt'
   );
@@ -50,7 +50,7 @@ const go = async () => {
 
   await download(
     `https://github.com/johnlindquist/kenv/tarball/${releaseChannel}`,
-    path.resolve(process.env.PWD, 'assets'),
+    path.resolve(process.cwd(), 'assets'),
     { filename: 'kenv.tar.gz' }
   );
 };

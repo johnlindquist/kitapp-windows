@@ -48,7 +48,6 @@
     "main": "main.prod.js"
   },
   "build": {
-    "extends": null,
     "generateUpdatesFilesForAllChannels": true,
     "detectUpdateChannel": "true",
     "productName": "Kit",
@@ -56,18 +55,6 @@
     "asar": true,
     "asarUnpack": [
       "**\\*.{node,dll}"
-    ],
-    "files": [
-      "dist/",
-      "fonts/**",
-      "node_modules/",
-      "index.html",
-      "debug.html",
-      "devTools.html",
-      "preload.js",
-      "main.prod.js",
-      "main.prod.js.map",
-      "package.json"
     ],
     "afterSign": ".erb/scripts/Notarize.js",
     "afterPack": ".erb/scripts/BundleNode.js",

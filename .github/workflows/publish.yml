@@ -37,8 +37,6 @@ jobs:
 
             ]
 
-      - uses: c-hive/gha-yarn-cache@v1
-
       - name: Install Kit
         run: |
           yarn add "@johnlindquist/kit"

@@ -187,12 +187,12 @@
     "publish": {
       "provider": "github",
       "owner": "johnlindquist",
-      "repo": "kitapp"
+      "repo": "kitapp-windows"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnlindquist/kitapp.git"
+    "url": "git+https://github.com/johnlindquist/kitapp-windows.git"
   },
   "author": {
     "name": "John Lindquist",
@@ -201,7 +201,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johnlindquist/kitapp/issues"
+    "url": "https://github.com/johnlindquist/kitapp-windows/issues"
   },
   "keywords": [
     "electron",

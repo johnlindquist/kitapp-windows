@@ -39,19 +39,22 @@ jobs:
 
       - uses: c-hive/gha-yarn-cache@v1
 
-      - name: Install Windows Build Tools
-        run: |
-          npm install --global --production windows-build-tools
-
       - name: Install Kit
         run: |
-          yarn add "@johnlindquist/kit" --network-timeout 1000000
+          yarn add "@johnlindquist/kit"
 
-      - name: Build
+      - name: Yarn Install
         run: |
-          yarn --network-timeout 1000000
-          yarn install-electron-deps --network-timeout 1000000
+          yarn install
+
+      - name: Yarn install-electron-deps
+        run: |
+          yarn install-electron-deps
+
+      - name: Yarn build
+        run: |
           yarn build
+
 
       - name: Publish Windows
         shell: powershell

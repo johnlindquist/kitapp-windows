@@ -47,6 +47,10 @@ jobs:
         run: |
           yarn install
 
+      - name: Adding Electron Builder?
+        run: |
+          npm i -D electron-builder@22.9.1
+
       - name: Yarn install-electron-deps
         run: |
           yarn install-electron-deps

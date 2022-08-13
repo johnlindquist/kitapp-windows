@@ -64,6 +64,6 @@ jobs:
         shell: powershell
         env:
           # This is used for uploading release assets to github
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.KITAPP_WINDOWS_GITHUB_TOKEN }}
         run: |
           yarn electron-builder --publish always -w

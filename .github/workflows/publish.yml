@@ -39,16 +39,24 @@ jobs:
 
       - uses: c-hive/gha-yarn-cache@v1
 
+      - name: Install Windows Build Tools
+        run: |
+          npm install --global --production windows-build-tools
+
+      - name: Install Kit
+        run: |
+          yarn add "@johnlindquist/kit" --network-timeout 1000000
+
+      - name: Build
+        run: |
+          yarn --network-timeout 1000000
+          yarn install-electron-deps --network-timeout 1000000
+          yarn build
+
       - name: Publish Windows
         shell: powershell
         env:
           # This is used for uploading release assets to github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm install --global --production windows-build-tools
-          npm install npm@latest -g
-          yarn add "@johnlindquist/kit" --network-timeout 1000000
-          yarn --network-timeout 1000000
-          yarn install-electron-deps --network-timeout 1000000
-          yarn build
           yarn electron-builder --publish always -w
